@@ -40,8 +40,8 @@ const BF_INP = {
     utils: {},
 
     audio: {
-        press: new Audio('sfx/press.mp3'),
-        small_press: new Audio('sfx/small_press.mp3')
+        press: new Audio(),
+        small_press: new Audio()
     },
 
     button: {
