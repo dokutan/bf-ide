@@ -20,8 +20,8 @@ Debugger.prototype.start = function() {
 Debugger.prototype.stop = function() {
     BF_INP.button.enable('dbg-start');
     BF_INP.button.disable('dbg-stop');
-    BF_INP.button.disable('dbg-run');
-    BF_INP.button.disable('dbg-step');
+    BF_INP.button.enable('dbg-run');
+    BF_INP.button.enable('dbg-step');
     src_viewer.setValue('Source View'); src_viewer.clearSelection();
     mem_viewer.setValue('Memory View'); mem_viewer.clearSelection();
     BF_INP.el.dbg.memp.style.display = 'none';
@@ -39,8 +39,11 @@ Debugger.prototype.run = function() {
         this.inp.skip();
     }
     else this.inp.run();
-    if(this.inp.eoc())
-    BF_INP.el.dbg.eoc.style.display = 'inline';
+    if(this.inp.eoc()){
+        BF_INP.el.dbg.eoc.style.display = 'inline';
+        BF_INP.button.disable('dbg-run');
+        BF_INP.button.disable('dbg-step');
+    }
 
     data = this.inp.data();
     this.update.mem(data);
@@ -58,10 +61,10 @@ Debugger.prototype.step = function() {
 
     let data, by = Math.max(Number(BF_INP.el.dbg.stepby.value), 1);
     while (
-        by-- && 
+        by-- &&
         (data = this.inp.data()).ip < data.code.length
     ) this.inp.step();
-    
+
     data = this.inp.data();
     this.update.mem(data);
     this.update.src_pointer(data);

@@ -64,10 +64,16 @@ const BF_INP = {
             BF_INP.debugger.dbg.stop();
         },
         run: () => {
+            if(document.getElementById('dbg-stop').disabled){
+                (BF_INP.debugger.dbg = new Debugger()).start();
+            }
             BF_INP.audio.press.play();
             BF_INP.debugger.dbg.run();
         },
         step: () => {
+            if(document.getElementById('dbg-stop').disabled){
+                (BF_INP.debugger.dbg = new Debugger()).start();
+            }
             BF_INP.audio.press.play();
             BF_INP.debugger.dbg.step();
         }
@@ -131,6 +137,6 @@ $(window).on('beforeunload', function() { return ''; });
 $(document).ready(() => {
     BF_INP.update.theme();
     BF_INP.button.disable('dbg-stop');
-    BF_INP.button.disable('dbg-run');
-    BF_INP.button.disable('dbg-step');
+    // BF_INP.button.disable('dbg-run');
+    // BF_INP.button.disable('dbg-step');
 });

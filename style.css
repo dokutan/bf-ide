@@ -23,10 +23,10 @@ body {
     font-size: larger;
 }
 
-.ace_scrollbar-v,
+/* .ace_scrollbar-v,
 .ace_scrollbar-h {
     overflow: hidden;
-}
+} */
 
 
 /*
@@ -37,7 +37,6 @@ body {
     width: 50%;
     height: 100%;
     float: left;
-    display: inline-block;
 }
 
 #src-viewer {
@@ -70,6 +69,7 @@ button {
     font-family: inconsolata;
     color: var(--color);
     border-color: var(--color);
+    border-style: solid;
     outline: none;
     cursor: pointer;
 }
@@ -82,7 +82,10 @@ button {
 }
 
 #clr3 {
-    margin-left: 546px;
+    left: 48%;
+    margin-left: 2em;
+    display: inline-block;
+    position: absolute;
 }
 
 #dbg {
@@ -99,6 +102,10 @@ button {
     margin-left: 20px;
 }
 
+#dbg-start {
+    display: none;
+}
+
 
 /*
 ** textareas
@@ -107,18 +114,22 @@ button {
 textarea {
     resize: none;
     outline: none;
+    font-family: inconsolata;
+    font-size: larger;
+    border-color: silver;
+    border-style: solid;
 }
 
 #input,
 #output {
     display: inline-block;
-    font-size: 22px;
+    font-size: larger;
     width: 48%;
     height: 5em;
 }
 
 #output {
-    margin-left: 40px;
+    margin-left: 1em;
 }
 
 
@@ -154,7 +165,8 @@ h4 {
 
 #theme-sel,
 #color-sel {
-    border-width: 0px;
+    font-size: larger;
+    border-style: none;
     outline: none;
     display: inline-block;
 }
@@ -181,7 +193,7 @@ h4 {
 
 #dbg-memp {
     display: none;
-    margin-left: 391px;
+    margin-left: 426px;
 }
 
 
@@ -205,7 +217,9 @@ input {
     outline-width: 0;
     font-family: inconsolata;
     border-color: silver;
+    border-style: solid;
     vertical-align: middle;
+    font-size: larger;
 }
 
 input[type=checkbox] {
