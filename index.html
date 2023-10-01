@@ -7,8 +7,8 @@
     </head>
 
     <body>
-        <div id="header">
-            <h4>Theme: </h4>
+        <header id="header">
+            <h3>Theme: </h3>
             <select id="theme-sel" onchange="BF_INP.audio.small_press.play(); BF_INP.update.theme()">
                 <option value="ambiance"               >ambiance</option>
                 <option value="chaos"                  >chaos</option>
@@ -49,7 +49,7 @@
                 <option value="vibrant_ink"            >vibrant_ink</option>
                 <option value="xcode"                  >xcode</option>
             </select>
-            <h4>Color: </h4>
+            <h3>Color: </h3>
             <select id="color-sel" onchange="BF_INP.update.color()">
                 <option value="hotpink">hot pink</option>
                 <option value="aqua"   >aqua</option>
@@ -60,7 +60,8 @@
                 <option value="black"  >black</option>
                 <option value="white"  >white</option>
             </select>
-        </div>
+            <div id="src"><a href="https://github.com/dokutan/bf-ide" target="_blank">Source</a> (this is a fork of the <a href="https://github.com/kvbc/bf-ide" target="_blank">original</a>)</div>
+        </header>
 
         <div id="main">
             <div id="editor"></div>
@@ -72,7 +73,7 @@
                 <input id="dbg-dbgmode" type="checkbox" onchange="BF_INP.dbg_mode = BF_INP.el.dbg.dbg_mode.checked"></input>
                 <h3 id="dbg-info">When debug mode is enabled, you can put breakpoints using the '#' sign and later on move to the closest one by using debugger's "Run" button</h3>
                 <br>
-                <button id="dbg" disabled>Debugger</button>
+                <!-- <button id="dbg" disabled>Debugger</button> -->
                 <br>
                 <h3 id="dbg-ip">ip: 0</h3>
                 <h3 id="dbg-mp">mp: 0</h3>
@@ -103,7 +104,7 @@
             <br>
             <button id="clr2" onclick="BF_INP.clear(input)" >Clear</button>
             <button id="clr3" onclick="BF_INP.clear(output)">Clear</button>
-            <a id="src" href="https://github.com/kvbc/bf-inp" target="_blank">Source</a>
+
         </div>
     </body>
 

@@ -7,10 +7,13 @@
     --color: hotpink;
 }
 
+a {
+    color: var(--color);
+}
+
 body {
     background-color: #242424;
 }
-
 
 /*
 ** ace
@@ -42,6 +45,7 @@ body {
     width: 99%;
     height: 23px;
 }
+
 #src-viewer .ace_selection {
     opacity: 30%;
     background-color: var(--color);
@@ -76,6 +80,7 @@ button {
     margin-left: 15px;
     display: inline-block;
 }
+
 #clr3 {
     margin-left: 546px;
 }
@@ -108,9 +113,10 @@ textarea {
 #output {
     display: inline-block;
     font-size: 22px;
-    width: 600px;
-    height: 225px;
+    width: 48%;
+    height: 5em;
 }
+
 #output {
     margin-left: 40px;
 }
@@ -127,11 +133,30 @@ h4 {
     font-family: inconsolata;
 }
 
+/* header */
+#src,
 #header h3,
 h4 {
     color: var(--color);
     display: inline-block;
-    margin-left: 50px;
+    margin: 0.2em;
+    margin-left: 1em;
+    margin-bottom: 0.8em;
+}
+
+#src {
+    margin-right: 1em;
+    font-family: inconsolata;
+    font-size: larger;
+    right: 0;
+    position: absolute;
+}
+
+#theme-sel,
+#color-sel {
+    border-width: 0px;
+    outline: none;
+    display: inline-block;
 }
 
 #dbg-ip,
@@ -157,20 +182,6 @@ h4 {
 #dbg-memp {
     display: none;
     margin-left: 391px;
-}
-
-
-/*
-** selects
-*/
-
-#theme-sel,
-#color-sel {
-    size: 50;
-    height: 30px;
-    border-width: 0px;
-    outline: none;
-    display: inline-block;
 }
 
 
@@ -202,22 +213,6 @@ input[type=checkbox] {
     height: 20px;
     cursor: pointer;
 }
-
-
-/*
-** as
-*/
-
-#src {
-    position: absolute;
-    color: var(--color);
-    font-family: inconsolata;
-    font-size: larger;
-    text-align: right;
-    right: 18px;
-    bottom: 10px;
-}
-
 
 /*
 ** other divs
