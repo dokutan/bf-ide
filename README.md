@@ -1,6 +1,8 @@
 # bf-ide
 Online [brainfuck](https://en.wikipedia.org/wiki/Brainfuck) IDE
 
+Available at dokutan.github.io/bf-ide
+
 This is a fork of https://kvbc.github.io/bf-ide, with the following changes:
 - no external dependencies
 - replaced the proprietary font
