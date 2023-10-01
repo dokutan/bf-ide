@@ -1,6 +1,6 @@
 @font-face {
-    font-family: consolas;
-    src: url("fonts/consolas.ttf");
+    font-family: inconsolata;
+    src: url("fonts/Inconsolata/Inconsolata-VariableFont_wdth\,wght.ttf");
 }
 
 :root {
@@ -63,7 +63,7 @@ button {
     height: 40px;
     background: none;
     font-size: 18px;
-    font-family: consolas;
+    font-family: inconsolata;
     color: var(--color);
     border-color: var(--color);
     outline: none;
@@ -120,11 +120,11 @@ textarea {
 ** hs
 */
 
-h3, 
+h3,
 h4 {
     color: silver;
     font-weight: normal;
-    font-family: consolas;
+    font-family: inconsolata;
 }
 
 #header h3,
@@ -180,7 +180,7 @@ h4 {
 
 label {
     font-size: 18px;
-    font-family: consolas;
+    font-family: inconsolata;
     vertical-align: middle;
     color: silver;
 }
@@ -192,7 +192,7 @@ label {
 
 input {
     outline-width: 0;
-    font-family: consolas;
+    font-family: inconsolata;
     border-color: silver;
     vertical-align: middle;
 }
@@ -211,7 +211,7 @@ input[type=checkbox] {
 #src {
     position: absolute;
     color: var(--color);
-    font-family: consolas;
+    font-family: inconsolata;
     font-size: larger;
     text-align: right;
     right: 18px;
