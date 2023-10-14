@@ -58,8 +58,10 @@ Interpreter.prototype.step = function(by = 1) {
             BF_INP.el.output.value += String.fromCharCode(this.mem[this.mp]);
             break;
         case ',':
-            if(this.inpi >= BF_INP.el.input.value.length) break;
-            this.mem[this.mp] = BF_INP.el.input.value.charCodeAt(this.inpi++);
+            const utf8EncodeText = new TextEncoder();
+            const byteArray = utf8EncodeText.encode(BF_INP.el.input.value);
+            if(this.inpi >= byteArray.length) break;
+            this.mem[this.mp] = byteArray[this.inpi++];
             break;
         case '[':
             if(this.mem[this.mp] == 0)
